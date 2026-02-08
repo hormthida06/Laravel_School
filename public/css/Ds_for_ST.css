@@ -1,0 +1,52 @@
+#body {
+    width: 100%;
+    margin: 0;
+    padding: 50px 10%;
+    padding-bottom: 100px;
+}
+.nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #000;
+}
+.nav .active {
+    color: #1a2a44;
+    font-weight: bold;
+}
+.greeting {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+}
+.course-card {
+    background: #f0f4f7;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 5px 10px rgba(128, 128, 128, 0.495);
+}
+.course-card:hover{
+    cursor: pointer;
+    background: #dddddda9;
+    transition: all ease-in-out 600ms;
+    scale: 1.1;
+}
+.course-card h3 {
+    margin: 0;
+    color: rgb(7, 62, 165);
+}
+.course-card p {
+    margin: 5px 0;
+}
+.progress {
+    color: green;
+}

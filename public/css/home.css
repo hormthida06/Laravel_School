@@ -1,0 +1,507 @@
+*{padding: 0; margin: 0; box-sizing: border-box; }
+
+/* ---------------Container---------------------- */
+#Container{
+    width: 100%;
+}
+
+/* ---------------layer1---------------------- */
+.layer1{
+    display: flex; 
+    width: 100%;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    background-color: rgb(235, 243, 250);
+}
+.layer1 .left{
+    width: 40%;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+.layer1 .left h1{
+    padding: 10px;
+    letter-spacing: 1px;
+    font-size: 40px;
+}
+.layer1 .left p{
+    font-size: 24px;
+    text-justify: center;
+    padding: 10px;
+}
+.layer1 .right{
+    width: 60%;
+}
+/* --------------------------Slide--------------------- */
+.layer1 .right .slider {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.slides {
+  display: flex;
+  width: calc(800px * 3); /* Number of slides * slide width */
+  animation: slide 9s infinite;
+}
+
+.slides img {
+  width: 100%;
+  height: 450px;
+}
+#carousel-item{
+    border-radius: 20px;
+}
+
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  33%  { transform: translateX(-10%); }
+  66%  { transform: translateX(-60%); }
+  100% { transform: translateX(0); }
+}
+
+#botton{display: flex; gap: 20px;}
+button{
+    background-color: rgb(244, 142, 142);
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+/* ---------------layer2---------------------- */
+.layer2{
+    width: 100%;
+    background-color: rgb(9, 38, 92);
+    padding: 15px 0;
+}
+
+.layer2 ul{
+    display: flex; 
+    align-content: center;
+    justify-content: space-around;
+}
+
+.layer2 ul li{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.layer2 ul li .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.layer2 ul li .text h2{
+    color: white;
+    padding: 0;
+}
+.layer2 ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+/* ---------------layer3---------------------- */
+.layer3{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-bottom: 20px;
+    gap: 50px;
+    padding: 50px;
+}
+/* ---------------layer3 Left---------------------- */
+.layer3 #left{
+    width: 27%;
+}
+.layer3 #left #mainBox{
+    width: 100%;
+}
+.layer3 #left .box{
+    width: 100%;
+    margin: 0;
+    padding: 0 20px 10px 20px;
+    background-color: rgb(229, 232, 238);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.layer3 #left .text{
+    width: 100%;
+    display: flex;
+    gap:20px;
+    align-items: center;
+    padding: 0px 25px;
+    align-content: center;
+    background-color: rgb(229, 232, 238);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px 10px 0 0 ;
+    padding-top: 20px;
+}
+/* .layer3 #left .letter{
+    width: 90%;
+    background-color: rgb(24, 71, 111);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+} */
+.layer3 #left .text h3{
+    color: #05558a; 
+    font-size: 20px; 
+    font-weight: bold;
+    padding-bottom:10px ;
+}
+.layer3 #left .text ion-icon{
+    color: #05558a; 
+    font-size: 23px; 
+    margin-bottom: 15px;
+}
+.layer3 #left ul{
+    padding: 0;
+}
+.layer3 #left ul li #Character .link{display: flex; gap: 10px;}
+.layer3 #left ul li #Character .link a{
+    font-size: 16px; 
+    color: #05558a;
+    display: block;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);}
+    
+.layer3 #left ul li #Character .link a:hover{
+    transform: scale(1.1); 
+    font-weight: bold; 
+    background-color: #d5eefac2;}
+
+.layer3 #left .head{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.layer3 #left .head .drop{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    left: 115px;
+    top: -8px;
+    z-index: 1;
+}
+
+.drop ion-icon{
+    color: #05558a; 
+    font-size: 23px; 
+    z-index: 5;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.drop input[type="checkbox"]{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 20;
+    width: 20px;height: 20px;
+    transition: height 700ms linear;
+    opacity: 0;
+}
+
+.drop input[type="checkbox"]:checked ~ .box{
+    height: 0px;
+    overflow: hidden;
+    transition: height 500ms linear;
+}
+.drop input[type="checkbox"]:checked ~ ion-icon{
+    transform: rotate(180deg);
+}
+.layer3 #left .box h2{
+    font-size: 20px;
+    border-bottom: 0.5px solid rgba(128, 128, 128, 0.486);
+}
+.layer3 #left ul li{
+    list-style-type: none; background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 0.5px solid rgba(128, 128, 128, 0.486);
+    box-shadow: 0 0.5px 5px rgba(0, 0, 0, 0.2);
+}
+.layer3 #left ul li a{
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+.layer3 #left ul li .row {display: flex; justify-content: space-between;}
+.layer3 #left ul li .row p{
+    background-color: rgba(160, 162, 161, 0.764);
+    padding: 5px 15px;
+    border-radius: 5px; 
+    margin-bottom: 5px; 
+    color: white;
+}
+/* ---------------layer3 right---------------------- */
+.layer3 #right {
+    width: 75%;
+    height: auto; 
+    position: relative;
+}
+
+/* ---------------Setting---------------------- */
+.layer3 #right #info{
+    width: 100%;
+    display: flex;
+    gap: 60px;
+}
+.setting{
+    width: 50%;
+    padding: 0 20px;    
+}
+
+.setting .option{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    align-content: center;
+    align-items: center;
+    background-color: #e6ecf4;
+    border-radius: 5px;
+    box-shadow: 0 0.5px 5px rgba(0, 0, 0, 0.2);
+}
+.setting .option label{
+    font-size: 16px;
+    padding-right: 10px;
+}
+
+.setting .option label p{
+    margin-right: 100px;
+}
+
+.setting .option select{
+    width: 250px;
+    outline: none;
+    border:2px solid #ccdef6;
+}
+
+/* ---------------Profile---------------------- */
+
+.mainbox {
+    border-radius: 10px;
+    background-color: #f9fafb;
+    padding: 20px 0;
+    width: 480px;
+    box-shadow: 1px 2px 5px 3px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 10;
+    margin-bottom: 20px;
+}
+
+.mainbox h2{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.mainbox .profile{
+   display: flex; 
+   width: 100%;
+   padding: 10px;
+   background-color: rgb(230, 243, 250);
+   gap: 20px;
+   align-items: center;
+}
+.mainbox .profile h3{
+    padding: 10px 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+.mainbox .profile .photos{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 100%;
+    /* border: 3px dashed gold; */
+}
+
+.mainbox .profile .photos img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.mainbox .info{
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+}
+.mainbox .info .uinfo{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-content: center;
+    padding-top: 10px; 
+    padding-left: 0;
+    margin-left: 0;
+}
+.mainbox .info .uinfo li{
+    list-style-type: none;
+    display: flex;
+    gap: 5px;
+}
+.mainbox .info .uinfo li h3{
+    font-size: 16px;
+    font-weight: bold;
+}
+.mainbox .info .uinfo li p{
+    font-size: 16px;
+}
+.mainbox .info .uinfo li ion-icon{
+    color: rgb(8, 93, 240);
+    font-size: 25px;
+}
+.mainbox .info .uinfo li img{
+    width: 25px;
+    height: 25px;
+}
+
+/* ---------------Student List---------------------- */
+.list {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;width: 100%;
+}
+
+.title{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.title h2{
+    font-size: 24px;
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 10px 0;
+
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #3182ce;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2b6cb0;
+}
+
+select {
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.list table thead tr th {
+    background-color: #edf2f7;
+    padding: 0.75rem;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+    width: 100%;
+    margin-top: 10px;
+    
+}
+
+th:first-child{
+    border-radius: 5px 0 0 5px;
+}
+
+th:last-child{
+    border-radius: 0 5px 5px 0;
+}
+
+td {
+    padding: 0.75rem;
+}
+
+td .profile{
+    width: 50px;
+    height: 50px;
+}
+
+td .profile img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+tr:hover {
+    background-color: #edf2f7;
+}
+
+input[type="checkbox"] {
+    vertical-align: middle;
+}
+
+.text-blue-500 {
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.text-blue-500:hover {
+    scale: 1.1;
+    transition: all ease-in-out 500ms;
+    color: #fff704;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.text-gray-600 {
+    color: #718096;
+}
+
+
+@media all and (max-width: 1400px){
+    nav .header{display: none;}
+
+    nav .headerRight{
+        width: 30%;
+        display: flex; 
+        justify-content: flex-end; 
+    }
+
+    nav .headerLeft{
+        width: 65%;
+        display: flex; 
+        justify-content: center;
+    }
+
+    nav #hamburgerMenu {  display: block;}
+}
+@media all and (max-width: 800px){
+    nav{gap: 30px;}
+}

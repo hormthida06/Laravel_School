@@ -1,0 +1,104 @@
+*{padding: 0; margin: 0; box-sizing: border-box; font-family: sans-serif; }
+
+/* ---------------content---------------------- */
+#content{
+    width: 100%;
+    display: flex;
+    overflow: hidden; 
+    background-color: rgba(212, 212, 212, 0.329);
+}
+#body{
+    padding: 50px 100px;
+}
+
+/*-------------Right--------------*/
+#content #main-right{
+    width: 80%;
+    justify-content: center;
+}
+#content #main-right h2{
+    padding-bottom: 50px;
+    color: #4f4f50;
+}
+
+/*-------------DashBoard--------------*/
+
+#head_top{
+    display: flex;
+    justify-content: space-between;
+}
+.card {
+    background: #fff;
+    width: 22%;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 3px 2px 5px rgba(0,0,0,0.1);
+}
+.card h3 {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+.card p {
+    margin: 10px 0 0;
+    font-size: 24px;
+    color: #333;
+}
+
+/*-----------------main-box-----------*/
+#main-box{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+#main-box:last-child{
+    justify-content: start;
+    gap: 70px;
+}
+
+#main-box a{
+    padding: 0;
+    margin: 0;
+}
+
+.mainbox{
+    width: 200px;
+    height: 250px;
+    box-shadow: -2px -2px 2px 2px rgb(193, 194, 194);
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+}
+.mainbox:hover{
+    box-shadow: 3px 3px 3px 3px rgb(193, 194, 194);
+    transition: all ease-in-out 700ms;
+    cursor: pointer;
+}
+.mainbox .subBox{
+    border-radius: 10px 10px 0 0;
+    padding: 0;
+    width: 100%;
+    height: 80%;
+}
+.mainbox .subBox img{
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 100%;
+}
+.title{
+    width: 200px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0 0 10px 10px;
+    padding: 10px 0;
+}
+.title a{
+    text-decoration: none;
+    color: rgb(2, 66, 122);
+    font-size: 16px;  
+}
+.title a:hover{
+    text-decoration: underline;
+    transition: all ease-in-out 700ms;
+}
+a{text-decoration: none;}

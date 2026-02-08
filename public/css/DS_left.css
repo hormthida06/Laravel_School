@@ -1,0 +1,122 @@
+/*-------------main-left--------------*/
+#main-left{
+    width: 20%;
+    position: relative;   z-index: 2000;
+    display: flex;
+    box-shadow: 10px 2px 9px hsla(0, 0%, 33%, 0.233);
+}
+#main-left #subRight{
+    width: 100%;
+    background-color: rgba(24, 42, 109, 0.801);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#main-left #subRight #profil{
+    background-color: rgb(243, 243, 244);
+    padding: 20px 0;
+}
+
+#main-left #subRight #profil ion-icon{
+    font-size: 70px;
+    color: #083a80;
+}
+
+#main-left #subRight #profil h1{
+    color: #000000;
+    font-size: 20px;padding: 0;
+}
+
+#main-left #subRight #profil p{
+    font-size: 16px;
+    color: #083a80;
+    text-align: center;padding: 0;
+}
+
+#main-left #subRight #profil button[type="submit"]{
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #228008;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+button:hover{
+    scale: 1.1;
+    transition: all ease-in-out 200ms;
+}
+
+#main-left #subRight ul{
+    overflow: hidden;
+    padding: 0 30px;
+    align-content: center;
+}
+
+#main-left #subRight ul li{
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 10px 0;
+    /*background-color: rgb(168, 164, 164); */ 
+}
+
+#main-left #subRight ul li:hover{
+    background-color: rgb(229, 237, 243);
+    transition: all ease-in-out 500ms;
+    color: #083a80;
+    scale: 1.1;
+    box-shadow: 0 1rem 0.5rem -0.75rem hsla(0, 0%, 0%,0.25);
+}
+
+
+#main-left #subRight ul li p{
+    display: flex;
+    width: 70%;
+    justify-self: start;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+}
+ion-icon{
+    width: 30%;
+    font-size: 35px;
+    color: aliceblue;
+}
+
+#main-left #subRight ul li:hover p{
+    transition: all ease-in-out 500ms;
+    color: #083a80;
+    font-weight: bold;
+}
+
+#main-left #subRight ul li:hover ion-icon{
+    transition: all ease-in-out 500ms;
+    color: #083a80;
+}
+
+#main-left #subRight ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-left #subRight ul li h1{
+    color: white;
+    font-size: 24px;
+}
+
+.success { 
+    background-color: green;  color: white;
+    padding: 8px 15px; border-top: 1px solid yellow;
+    border-bottom: 1px solid yellow;  margin-bottom: 15px;
+    font-size: 14px; margin-top: 15px;
+}
+.success a { color: yellow; font-size: 16px;}
+.error { 
+    background-color: red;  color: white;
+    padding: 8px 15px; border-top: 1px solid yellow;
+    border-bottom: 1px solid yellow;  margin-bottom: 15px;
+    font-size: 14px; margin-top: 15px;
+}

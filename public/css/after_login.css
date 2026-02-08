@@ -1,0 +1,525 @@
+*{padding: 0; margin: 0; box-sizing: border-box; }
+nav{
+    width: 100%;
+    height: 90px;
+    background-color: rgb(253, 253, 253);
+    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 0 0.7rem 0.5rem -0.75rem hsla(0, 0%, 0%,0.25);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    border-bottom: 1px solid #d3e2f7;
+    padding: 0 70px;
+}
+
+/*-------------------------------HambugerMenu-----------------------------*/
+#hamburgerMenu { 
+    width: 100%;
+    position: absolute; 
+    height: 600px;  
+    z-index: 200;
+    left: 0;
+    top: 91px;
+    display: none;
+}
+#hamburgerMenu input[type="checkbox"]#chkMenu { display: none; }
+
+#hamburgerMenu input[type="checkbox"]#chkMenu + label {
+    width: 40px; 
+    height: 31px; 
+    background-color: #d4dce1;
+    border-radius: 5px;
+    display: block;
+    cursor: pointer; 
+    position: relative; 
+    z-index: 100; 
+    left: 10%;
+    top: -60px;
+}
+
+#hamburgerMenu input[type="checkbox"]#chkMenu + label .line1,
+#hamburgerMenu input[type="checkbox"]#chkMenu + label .line2,
+#hamburgerMenu input[type="checkbox"]#chkMenu + label .line3 {
+    left: 6px; 
+    right: 6px; 
+    background-color: rgb(1, 42, 77);
+    height: 3px; 
+    border-radius: 5px; 
+    position: absolute;
+    transition: all cubic-bezier(0.32, 1.59, 0.78, -0.6) 400ms;
+}
+
+#hamburgerMenu input[type="checkbox"]#chkMenu + label .line1 { top: 6px; }
+#hamburgerMenu input[type="checkbox"]#chkMenu + label .line2 { top: 14px; height: 2px; }
+#hamburgerMenu input[type="checkbox"]#chkMenu + label .line3 { top: 21px; }
+
+#hamburgerMenu input[type="checkbox"]#chkMenu:checked + label .line1 {
+    top: 14px; transform: rotate(135deg);
+}
+#hamburgerMenu input[type="checkbox"]#chkMenu:checked + label .line2 {
+    top: 14px; opacity: 0;
+}
+#hamburgerMenu input[type="checkbox"]#chkMenu:checked + label .line3 {
+    top: 14px; transform: rotate(-135deg);
+}
+
+#hamburgerMenu input[type="checkbox"]#chkMenu ~ #allLinks {
+    position: absolute; 
+    z-index: 2;
+    transition: max-height ease-in-out 300ms;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    top: 0;
+}
+
+#hamburgerMenu input[type="checkbox"]#chkMenu:checked ~ #allLinks {
+    max-height: 280px; 
+}
+
+#hamburgerMenu input[type="checkbox"]#chkMenu ~ #allLinks #linksSpacer {
+    background-color: rgb(9, 38, 92); 
+    height: 300px;
+    padding: 20px;
+}
+
+#hamburgerMenu #allLinks #linksSpacer ul{
+    padding: 10px 50px;
+}
+#hamburgerMenu #allLinks #linksSpacer ul li{
+    width: 0px;
+    list-style-type: none; 
+    position: relative; 
+    padding: 5px;
+    z-index: 10000;
+}
+
+#hamburgerMenu #allLinks #linksSpacer ul li a{
+    text-decoration: none;  
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 10px;
+    color: rgb(255, 255, 255);
+    display: block;
+    transition: all ease-in-out 500ms;
+}
+
+#hamburgerMenu #allLinks #linksSpacer ul li a:hover{
+    width: 140px;
+    color: #083a80;
+    background-color: aliceblue;
+    padding-left: 30px;
+}
+
+#allLinks ul li ul{
+    position: absolute;
+    width: 0; 
+    z-index: 400;
+    border: none;
+    top: 0;
+    left: 180px;
+    overflow: hidden;
+    transition: all ease-in-out 600ms;
+}
+
+#allLinks ul li ul li{
+    overflow: hidden;
+}
+
+#allLinks ul li ul li a{
+    display: block;
+    white-space: nowrap;
+    border: none;
+    color: #ffffff;
+    background-color: transparent;
+    font-size: 14px;
+    padding: 5px;
+}
+#allLinks ul li:hover ul{
+    width: 310px; 
+    background-color: #000000;
+    opacity: 1;
+}
+#allLinks ul li ul li a:hover{
+    background-color:#f6fdfe ;
+    font-weight: bold;
+    color: #121212;
+    transition: all ease-in-out 600ms;
+}
+#allLinks ul li.sublink > a{
+    padding-right: 40px;
+}
+#allLinks ul li.sublink > a::after{
+    content: '\27a4';
+    transform: rotate(0deg);
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "courier New";
+    left: 150px;
+    top: 7px;
+    transition: all linear 700ms;
+}
+#allLinks ul li.sublink:hover > a::after
+{
+   transform: rotate(-180deg);
+   color: #083a80;
+}
+
+/*-------------------------------Header Right-----------------------------*/
+
+nav .headerRight{
+    width: 7%;
+    display: flex;
+    align-content: center;
+}
+
+nav .headerRight .logo{
+    width: 100px;
+    height: 90px;
+    align-content: center;
+}
+
+nav .headerRight .logo img{
+    width: 100%;
+    height: 100%;
+}
+
+/*-------------------------------Header -----------------------------*/
+
+nav .header{
+    width: 70%;
+    height: 100%;
+    align-content: center;
+    padding-top: 13px; 
+}
+nav .header ul{
+    width: 100%;
+    justify-content: center;
+    display: flex; 
+    gap: 50px;
+    padding: 10px 0;
+    align-content: center;
+}
+nav .header ul li{
+    align-content: center;
+    height: auto;
+    list-style-type: none;
+    position: relative;
+}
+
+nav .header ul li:hover{
+    scale: 1.1;
+    transition: all ease-in-out 500ms;
+}
+nav .header ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #083a80;
+    padding: 20px 0px;
+}
+nav .header ul li a:hover{
+    color: #e44432;
+    scale: 1.1;
+    text-shadow: 0.5px 2px 2px rgb(169, 167, 167);
+    transition: all ease-in-out 500ms;
+}
+
+/*-------------ul sublink--------------*/
+nav .header ul li ul{
+    display: block;
+    position: absolute;
+    z-index: 100;
+    padding: 0;
+    width: 250px;
+    border: none;
+    top: 55px;
+    left: -70px;
+    height: 0; 
+    overflow: hidden;
+    transition: all ease-in-out 600ms;
+    opacity: 0.8;
+}
+nav .header ul li ul li{
+    align-content: center;
+    height: 40px;
+    border-bottom: 1px dashed white;
+    justify-content: center;
+    background-color: #4a77b7;
+}
+
+nav .header ul li ul li:last-child{
+    border: none;
+}
+
+nav .header  ul li ul li a{
+    display: block;
+    white-space: nowrap;
+    border: none;
+    color: #ffffff;
+    background-color: transparent;
+    font-size: 14px;
+    padding: 10px;
+}
+nav .header  ul li:hover ul{
+    height: 210px; 
+}
+nav .header  ul li ul li:hover{
+    background-color:#060606 ;
+    color: #121212;
+    padding-left: 40px;
+    transition: all ease-in-out 600ms;
+}
+nav .header  ul li ul li a:hover{
+    color: white;
+    font-size: 12px;
+    text-shadow: none;
+}
+nav .header  ul li.sublink > a{
+    padding-right: 40px;
+}
+nav .header  ul li.sublink > a::after{
+    content: '\27a4';
+    transform: rotate(90deg);
+    position: absolute;
+    color: #083a80;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "courier New";
+    padding:0 10px ;
+    transition: all linear 700ms;
+
+}
+nav .header  ul li.sublink:hover > a::after
+{
+   transform: rotate(-90deg);
+   color: #e44432;
+}
+
+/*-------------HeaderLeft--------------*/
+
+nav .headerLeft {
+    width: 15%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+}
+
+nav .headerLeft ul {
+    display: flex;
+    gap: 20px;
+    padding: 5px 0;
+    align-items: center; 
+    justify-content: center; 
+}
+
+nav .headerLeft ul li {
+    list-style-type: none;
+    font-size: 18px;
+    display: flex; 
+    align-items: center; 
+}
+
+nav .headerLeft ul li ion-icon {
+    width: 25px;
+    height: 25px;
+    color: #fcc601;
+}
+
+.logout-btn {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0e5dcd;
+    cursor: pointer;
+    margin: 0; 
+    border: none;
+    outline: none;
+    background-color: white;
+}
+.logout-btn:hover {
+    text-decoration-line: underline;
+    background-color: white;
+}
+
+.headerLeft ul li .profile {
+    width: 60px;
+    height: 60px;
+    background-color: #0552bd;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.headerLeft ul li .profile img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* ---------------Call---------------------- */
+.call {
+    width: 60px;
+    height: 60px;
+    display: flex; 
+    justify-content: center;
+    border-radius: 50%;
+    position: relative;
+    list-style: none;
+    transition: background-color ease-in-out 500ms;
+}
+
+.call:hover {
+    transition: all ease-in-out 500ms;
+    background-color: #f5b6b69c;
+    color: #fff; 
+}
+
+.call ion-icon {
+    color: rgb(211, 13, 10);
+    font-size: 24px; /* Adjust size as needed */
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px;
+}
+
+.call ul {
+    opacity: 0;
+    position: absolute;
+    display: block;
+    width: 150px;
+    height: 0;
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%); 
+    background-color: #ffffffa4;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    height: 0; 
+    overflow: hidden;
+    transition: all ease-in-out 600ms;
+}
+
+.call:hover ul {
+    opacity: 1;
+    transition: all ease-in-out 700ms;
+    display: block;
+    height: 150px;
+    
+}
+
+.call ul li {
+    list-style: none;
+    justify-content: center;
+    padding: 5px;
+}
+
+.call ul a {
+    color: #1a2a44;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.call ul a:hover {
+    text-decoration: underline;
+    color: rgb(211, 13, 10);
+}
+
+/* ---------------Container---------------------- */
+#Container{
+    width: 100%;
+}
+
+/*--------------------Footer-----------------*/
+#footer{
+    gap: 20px;
+    width: 100%;
+    background-color: #5d5e5e95;
+    display: flex;
+    justify-content: center;
+}
+#footer .Col{
+    justify-content: center;
+    width: 26%;
+    padding: 30px 10px;
+}
+#footer .Col:first-child{
+    width: 15%;
+    padding-left: 20px;
+}
+#footer .Col .logo{
+    width: 200px;
+    height: 200px;
+}
+
+#footer .Col .logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.Col h1{
+    font-size: 30px;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+}
+.Col p{
+    font-size: 16px;
+    padding: 10px;
+    color: white;
+    letter-spacing: 1px;
+}
+.Col a{
+    text-decoration: none;
+    color: white;
+}
+#icon ul{display: flex; gap: 30px;}
+#icon ul li {
+    text-decoration: none;
+    list-style-type: none;
+    width: 30px;
+    height: 30px;
+}
+#icon ul li img{
+    width: 100%;
+    height: 100%;
+}
+#icon ul li img:hover{
+    transition: all ease-in-out 500ms;
+    transform: scale(1.2);
+}
+.Col h3{
+    font-size: 20px;
+    color: white;
+    padding-top: 20px;
+    font-weight: normal;
+}
+
+@media all and (max-width: 1400px){
+    nav .header{display: none;}
+
+    nav .headerRight{
+        width: 30%;
+        display: flex; 
+        justify-content: flex-end; 
+    }
+
+    nav .headerLeft{
+        width: 65%;
+        display: flex; 
+        justify-content: center;
+    }
+
+    nav #hamburgerMenu {  display: block;}
+}
+@media all and (max-width: 800px){
+    nav{gap: 30px;}
+}

@@ -1,0 +1,195 @@
+/*-------------Right--------------*/
+#Container #main-right{
+    width: 80%;
+}
+
+.Main-Title {
+    box-shadow: 0 1rem 1rem -0.55rem hsla(0, 0%, 0%,0.25);
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(24, 42, 109, 0.801),rgba(63, 87, 176, 0.801), rgb(148, 157, 210));
+    cursor: pointer;
+}
+.Main-Title h1{
+    color: white;
+}
+#main-right form{
+    width: 85%;
+    height: auto;
+    background-color: rgba(212, 212, 212, 0.329);
+    padding: 50px 10%;
+    margin: 40px 10%;
+    border-radius: 10px;
+    box-shadow: 2rem 2rem 1rem -0.55rem hsla(0, 0%, 0%,0.25);
+}
+
+#main-right form .data{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    border-radius: 5px;
+}
+
+input{
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    border-radius: 5px;
+    border: 0.2px solid rgb(187, 200, 212);
+    font-size: 16px;
+    font-family: sans-serif;
+    background-color: #f9fafb;
+    
+}
+label{
+    font-family: sans-serif;
+    width: 30%;
+    font-size: 18px;
+    color: #083a80;
+}
+select{
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    border-radius: 5px;
+    border: 0.2px solid rgb(187, 200, 212);
+    font-size: 16px;
+    font-family: sans-serif;
+    background-color: #f9fafb;
+}
+button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    margin: 20px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+button:hover{
+    scale: 1.1;
+    transition: all ease-in-out 500ms;
+    box-shadow: 0 0.5rem 1rem -0.55rem hsla(0, 0%, 0%,0.25);
+}
+
+/*-----------------Content-----------*/
+#main-right #content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 40px 0;
+}
+.mainbox{
+    width: 200px;
+    height: 250px;
+    padding: 0;
+    box-shadow: -2px -2px 2px 2px rgb(193, 194, 194);
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.mainbox:hover{
+    box-shadow: 3px 3px 3px 3px rgb(193, 194, 194);
+    transition: all ease-in-out 700ms;
+    cursor: pointer;
+}
+.mainbox .subBox{
+    border-radius: 10px 10px 0 0;
+    padding: 0;
+    width: 100%;
+    height: 80%;
+}
+.mainbox .subBox img{
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 100%;
+}
+.title{
+    width: 200px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0 0 10px 10px;
+    padding: 10px 0;
+}
+.title a{
+    text-decoration: none;
+    color: rgb(2, 66, 122);
+    font-size: 16px;  
+}
+.title a:hover{
+    text-decoration: underline;
+    transition: all ease-in-out 700ms;
+}
+a{text-decoration: none;}
+
+/*-----------------button-----------*/
+.button{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    gap: 70px;
+    margin-top: 20px;
+    justify-content: center;
+}
+.button input[type="submit"]{
+    width: 30%;
+    padding: 10px;
+    color: rgb(27, 141, 5);
+    font-size: 18px;
+    font-weight: bold;
+    border: 0.2px solid green;overflow: hidden;
+}
+
+.button input[type="submit"]:hover{
+    color: rgb(255, 255, 255);
+    background-color:rgb(27, 141, 5) ;
+    scale: 1.1;
+    transition: all ease-in-out 700ms;
+}
+
+.button input[type="reset"]{
+    width: 30%;
+    padding: 10px;
+    color: rgb(193, 5, 5);
+    font-size: 18px;
+    font-weight: bold;
+    border: 0.2px solid rgb(193, 5, 5);
+}
+
+.button input[type="reset"]:hover{
+    transition: all ease-in-out 700ms;
+    color: rgb(255, 255, 255);
+    background-color:rgb(193, 5, 5);
+    scale: 1.1;
+}
+
+/*-----------------Upload-----------*/
+
+.upload{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+input[type="file"]{
+    width: 100%;
+    padding: 20px;
+    border: 0.2px solid rgb(187, 200, 212);
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: rgb(236, 245, 248);
+}
+input[type="file"]:hover{
+    border: 0.2px solid rgb(159, 186, 211);
+    padding:20px 23px;
+    transition: all ease-in-out 500ms;
+}
